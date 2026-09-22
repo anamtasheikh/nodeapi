@@ -13,7 +13,7 @@ export const userpage=async (req,res)=>{
 
 export const showbyid=async(req,res)=>{
     try{
-        const users = await productModel.findById(req.params.id)
+        const users = await userModel.findById(req.params.id)
         res.status(200).json({data:users})
     } catch (error) {
     res.status(500).json({msg:"db not available"})
